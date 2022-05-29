@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <base target="_top">
     <style>
@@ -11,14 +12,17 @@
         padding: 0 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
       }
+
       .fe-heading {
         color: #4c4c4c;
         font-size: 1.7rem;
       }
+
       .fe-item {
         margin: 16px auto;
         margin-bottom: 20px;
       }
+
       .fe-label {
         color: #808080;
         font-size: 0.8rem;
@@ -26,6 +30,7 @@
         margin: 0;
         margin-bottom: 5px;
       }
+
       .fe-content {
         margin: 0;
       }
@@ -37,19 +42,18 @@
 
       .fe-bottom {
         background-image: linear-gradient(145deg,
-          #f60000,
-          #cd00cd,
-          #ff8c00,
-          #ffee00,
-          #4de94c,
-          #f60000,
-          #cd00cd,
-          #ff8c00,
-          #ffee00,
-          #4de94c,
-          #f60000,
-          #cd00cd
-        );
+            #f60000,
+            #cd00cd,
+            #ff8c00,
+            #ffee00,
+            #4de94c,
+            #f60000,
+            #cd00cd,
+            #ff8c00,
+            #ffee00,
+            #4de94c,
+            #f60000,
+            #cd00cd);
         width: 100%;
         padding-top: 4px;
         position: relative;
@@ -67,6 +71,7 @@
       }
     </style>
   </head>
+
   <body>
     <div class="fe-container">
       <div>
@@ -81,14 +86,20 @@
         ?>
 
         <? for (const [key, value] of Object.entries(data)) { ?>
-          <div class="fe-item" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-            <p class="fe-label" style="font-size: 14px;"><?= formatString(key) ?></p>
-            <p class="fe-content" style="font-size: 16px"><?= value ?></p>
-          </div>
+        <div class="fe-item" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+          <p class="fe-label" style="font-size: 14px;">
+            <?= formatString(key) ?>
+          </p>
+          <p class="fe-content" style="font-size: 16px">
+            <?= value ?>
+          </p>
+        </div>
         <? } ?>
 
         <div class="fe-item" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
-          <p class="fe-date" style="font-size:14px">Submitted date: <?= date ?></p>
+          <p class="fe-date" style="font-size:14px">Submitted date:
+            <?= date ?>
+          </p>
         </div>
 
         <div class="fe-bottom">
@@ -102,4 +113,5 @@
     </div>
 
   </body>
+
 </html>

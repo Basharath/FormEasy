@@ -85,7 +85,7 @@ Note: The keys of the `data` object should match with the fields that are set us
   </summary>
   Yes, it is completely safe.
 
-FormEasy code doesn't interact with any remote servers. You can check the source code of the FormEasy library using it's ScriptID.
+FormEasy code doesn't interact with any remote servers. You can check the source code of the FormEasy library using its ScriptID.
 
 Google shows it unsafe because it hasn't verified the script. Even if you write your own script and grant permission the same message will be shown.
 
