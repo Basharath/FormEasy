@@ -1,6 +1,6 @@
 # FormEasy
 
-FormEasy is a free and open source apps script library that lets you receive forms from your static sites without writing any code.
+FormEasy is a free and open source apps script library that lets you receive forms from your static sites with ease.
 
 Script ID: `1Q5-rRsocVEjTjgDHvkhWrqO2nURPh4JtQ4yZTbroWnF-iSO8z-CAhgdJ`
 
@@ -75,3 +75,38 @@ fetch(url, {
   .then((data) => console.log('data', data))
   .catch((err) => console.log('err', err));
 ```
+
+Note: The keys of the `data` object should match with the fields that are set using `setFields` method in the apps script file. The default keys are `name`, `email` and `message`.
+
+## FAQs
+
+<details>
+  <summary>1. Is it safe to grant permission to the apps script file while using FormEasy library?
+  </summary>
+  Yes, it is completely safe.
+
+FormEasy code doesn't interact with any remote servers. You can check the source code of the FormEasy library using it's ScriptID.
+
+Google shows it unsafe because it hasn't verified the script. Even if you write your own script and grant permission the same message will be shown.
+
+</details>
+
+<details>
+  <summary>2. Can I customize FormEasy script?
+  </summary>
+  
+  Yes. You're free to customize any part of the FormEasy script and deploy on your own to reflect the same.
+
+If you want even others to use that, you can contribute your code to the [dev-version](https://github.com/Basharath/FormEasy/tree/master/dev-version) script and once verified it will be pushed to the main version.
+
+</details>
+
+<details>
+  <summary>3. What are the limitations of FormEasy?
+  </summary>
+  
+  There are no specific limitations for FormEasy library.
+
+But Google Apps Script limits the email to 100/day and script run time to 6min/execution. You can see more about those [here](https://developers.google.com/apps-script/guides/services/quotas)
+
+</details>
