@@ -1,14 +1,14 @@
-# FormEasy
+# <center> FormEasy</center>
 
-FormEasy is a free and open source apps script library that lets you receive forms from your static sites with ease.
+FormEasy is a free and open source apps script library that lets you receive forms from your static sites very easily.
 
-Script ID: `1Q5-rRsocVEjTjgDHvkhWrqO2nURPh4JtQ4yZTbroWnF-iSO8z-CAhgdJ`
+Script ID: `1CAyzGbXdwMlko81SbJAjRp7ewxhyGKhDipDK4v8ZvlpYqrMAAzbFNccL`
 
 ## Adding FormEasy library to Apps Script
 
 1. Open a new Google sheets file(this is where your form data gets stored)
 2. From the menu bar click Extensions > Apps Script and it opens up a new apps script file
-3. In the left bar of apps script file click `+` icon beside `Libraries`
+3. In the left bar of apps script file click `+` button beside `Libraries`
 4. Add the `Script ID` listed above and click `Look up` button and select the latest version. Note the identifier it is going to be used to invoke the functions in the library and finally click `Add` button.
 
 Now you can use `FormEasy` object inside the apps script file.
@@ -43,13 +43,13 @@ function doPost(req) {
 
 After adding the above function click the `Deploy` button at top right corner and select **New deployment** and select type to `Web app` from the gear icon.
 
-Select the below options
+Select/fill the below options
 
 - Description(optional),
 - Execute as `Me(you email)`
 - Who has access `Anyone`
 
-Click `Deploy` button and you will get a URL under `Web app`, copy that and it is going to be the end point for submitting the POST request.
+Click `Deploy` button(authorize the script if you haven't done before) and you will get a URL under `Web app`, copy that and it is going to be the end point for submitting the POST request.
 
 Note: You need not make _New deployment_ everytime if you want to use the same web app URL. Select **Manage deployments** and update the version to keep the same URL.
 
@@ -110,3 +110,7 @@ If you want even others to use that, you can contribute your code to the [dev-ve
 But Google Apps Script limits the email to 100/day and script run time to 6min/execution. You can see more about those [here](https://developers.google.com/apps-script/guides/services/quotas)
 
 </details>
+
+## License
+
+FormEasy is distributed using the MIT License. Check the [License details](https://github.com/Basharath/FormEasy/blob/master/LICENSE).
