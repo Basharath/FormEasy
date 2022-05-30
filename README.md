@@ -97,7 +97,7 @@ Google shows it unsafe because it hasn't verified the script. Even if you write 
   
   Yes. You're free to customize any part of the FormEasy script and deploy on your own to reflect the same.
 
-If you want even others to use that, you can contribute your code to the [dev-version](https://github.com/Basharath/FormEasy/tree/master/dev-version) script and once verified it will be pushed to the main version.
+If you want even others to use your customizations then you can contribute your code and once verified it will be pushed to the main script. You can check [contributing guidelines](https://github.com/Basharath/FormEasy/blob/master/CONTRIBUTING.md).
 
 </details>
 
