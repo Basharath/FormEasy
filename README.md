@@ -1,4 +1,4 @@
-# <center> FormEasy</center>
+<h1 align="center">FormEasy</h1>
 
 FormEasy is a free and open source apps script library that lets you receive forms from your static sites very easily.
 
@@ -77,6 +77,15 @@ fetch(url, {
 ```
 
 Note: The keys of the `data` object should match with the fields that are set using `setFields` method in the apps script file. The default keys are `name`, `email` and `message`.
+
+
+## Video instructions
+To see all the above instructions lively, check this demo video below.
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=0u75mtnhifM/">
+    <img alt="FormEasy video demo" src="https://img.youtube.com/vi/0u75mtnhifM/0.jpg" width="510" height="280"  />
+  </a>
+</p>
 
 ## FAQs
 
