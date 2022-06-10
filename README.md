@@ -78,6 +78,7 @@ fetch(url, {
 
 Note: The keys of the `data` object should match with the fields that are set using `setFields` method in the apps script file. The default keys are `name`, `email` and `message`.
 
+Article: https://devapt.com/formspree-alternative-formeasy
 
 ## Video instructions
 To see all the above instructions lively, check this demo video below.
