@@ -1,5 +1,23 @@
 <h1 align="center">FormEasy</h1>
 
+<p align="center">
+  <a href="https://github.com/Basharath/FormEasy/blob/master/LICENSE" target="blank">
+    <img src="https://img.shields.io/github/license/Basharath/FormEasy" alt="FormEasy licence" />
+  </a>
+  <a href="https://github.com/Basharath/FormEasy/fork" target="blank">
+    <img src="https://img.shields.io/github/forks/Basharath/FormEasy" alt="FormEasy forks"/>
+  </a>
+  <a href="https://github.com/Basharath/FormEasy/stargazers" target="blank">
+    <img src="https://img.shields.io/github/stars/Basharath/FormEasy" alt="FormEasy stars"/>
+  </a>
+  <a href="https://github.com/Basharath/FormEasy/issues" target="blank">
+    <img src="https://img.shields.io/github/issues/Basharath/FormEasy" alt="FormEasy issues"/>
+  </a>
+  <a href="https://github.com/Basharath/FormEasy/pulls" target="blank">
+    <img src="https://img.shields.io/github/issues-pr/Basharath/FormEasy" alt="FormEasy pull-requests"/>
+  </a>
+</p>
+
 FormEasy is a free and open source apps script library that lets you receive forms from your static sites very easily.
 
 Script ID: `1CAyzGbXdwMlko81SbJAjRp7ewxhyGKhDipDK4v8ZvlpYqrMAAzbFNccL`
@@ -81,7 +99,9 @@ Note: The keys of the `data` object should match with the fields that are set us
 Article: https://devapt.com/formspree-alternative-formeasy
 
 ## Video instructions
+
 To see all the above instructions lively, check this demo video below.
+
 <p align="center">
   <a href="https://www.youtube.com/watch?v=0u75mtnhifM/">
     <img alt="FormEasy video demo" src="https://img.youtube.com/vi/0u75mtnhifM/0.jpg" width="510" height="280"  />
