@@ -3,6 +3,7 @@ let emailSubject = 'New submission using FormEasy';
 let formHeading = 'Form submission - FormEasy';
 let email = '';
 let fields = [];
+let captcha = null;
 
 /**
  * @param {String} name Name of the sheet to log the data
@@ -70,6 +71,15 @@ function setFields(...fieldsArr) {
 }
 
 /**
+ * Google reCAPTCHA V2 implementation
+ * 
+ * @param {String} secretKey Private key of reCAPTCHA site
+ */
+function setRecaptcha(secretKey) {
+  captcha = { type: 'recaptcha_v2', data: { secretKey } };
+}
+
+/**
  * @param {Object} req POST request object
  * @return {Object} response to the POST request
  */
@@ -87,6 +97,44 @@ function action(req) {
       message: 'Invalid JSON format',
     };
     return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
+  }
+
+  if (captcha) {
+    switch (captcha.type) {
+      case 'recaptcha_v2':
+        const siteKey = jsonData['g-recaptcha-response'];
+
+        if (!siteKey) {
+          response = {
+            status: 'error',
+            message: 'reCAPTCHA verification under key \'g-recaptcha-response\' is required.',
+          };
+          return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
+        }
+
+        var captchaResponse = UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
+          'method': 'post',
+          'payload': {
+            'response': siteKey,
+            'secret': captcha.data.secretKey
+          }
+        });
+
+        var captchaJson = JSON.parse(captchaResponse.getContentText());
+
+        if (!captchaJson.success) {
+          response = {
+            status: 'error',
+            message: 'Please tick the box to verify you are not a robot.',
+          };
+
+          return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
+        }
+
+        break;
+      default:
+      // Captcha not enabled
+    }
   }
 
   let logSheet;
