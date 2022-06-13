@@ -112,7 +112,7 @@ function action(req) {
           return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
         }
 
-        var captchaResponse = UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
+        const captchaResponse = UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
           'method': 'post',
           'payload': {
             'response': siteKey,
@@ -120,7 +120,7 @@ function action(req) {
           }
         });
 
-        var captchaJson = JSON.parse(captchaResponse.getContentText());
+        const captchaJson = JSON.parse(captchaResponse.getContentText());
 
         if (!captchaJson.success) {
           response = {

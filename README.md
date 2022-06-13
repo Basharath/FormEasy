@@ -106,7 +106,7 @@ FormEasy supports multiple captcha providers to allow you to prevent unverified 
 
 1. Register a site and get your secret key, and site key: [https://www.google.com/recaptcha/admin/create](https://www.google.com/recaptcha/admin/create)
 
-2. In your apps script file, inside function `doPost, add the following configuration:
+2. In your apps script file, inside function `doPost`, add the following configuration:
 
 ```js
 function doPost(req) {
@@ -116,8 +116,6 @@ function doPost(req) {
   return FormEasy.action(req); // Mandatory to return action method
 }
 ```
-
-> Make sure to set your secret key. You should have it ready from step 1
 
 3. On your website, add the reCAPTCHA library at the end of the `<head>` tag:
 
@@ -134,8 +132,6 @@ function doPost(req) {
 ```html
 <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
 ```
-
-> Make sure to set your secret key. You should have it ready from step 1
 
 5. You should see `I am not a robot` box on your site. If you don't, please refer to [reCAPTCHA Docs](https://developers.google.com/recaptcha/docs/display) for debugging.
 
