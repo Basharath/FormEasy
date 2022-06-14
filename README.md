@@ -98,6 +98,54 @@ Note: The keys of the `data` object should match with the fields that are set us
 
 Article: https://devapt.com/formspree-alternative-formeasy
 
+## Captcha validation
+
+FormEasy supports multiple captcha providers to allow you to prevent unverified submissions by robots. Each provider is unique and requires a unique configuration. Please refer to the documentation below to enable a specific captcha provider.
+
+### Google reCAPTCHA V2
+
+1. Register a site and get your secret key, and site key: [https://www.google.com/recaptcha/admin/create](https://www.google.com/recaptcha/admin/create)
+
+2. In your apps script file, inside function `doPost`, add the following configuration:
+
+```js
+function doPost(req) {
+  // ...
+  FormEasy.setRecaptcha('YOUR_SECRET_KEY'); // To validate reCAPTCHA
+  // ...
+  return FormEasy.action(req); // Mandatory to return action method
+}
+```
+
+3. On your website, add the reCAPTCHA library at the end of the `<head>` tag:
+
+```html
+<head>
+  <!-- ... -->
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+```
+
+4. Add reCAPTCHA input into your form:
+
+```html
+<div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+```
+
+5. You should see `I am not a robot` box on your site. If you don't, please refer to [reCAPTCHA Docs](https://developers.google.com/recaptcha/docs/display) for debugging.
+
+6. Inside your `fetch()` method, add a reCAPTCHA response from the input:
+
+```js
+const data = {
+  // ...
+  'g-recaptcha-response': document.getElementById('g-recaptcha-response').value,
+};
+
+// ...
+```
+
 ## Video instructions
 
 To see all the above instructions lively, check this demo video below.
