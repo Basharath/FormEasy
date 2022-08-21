@@ -140,7 +140,7 @@ function doPost(req) {
 ```js
 const data = {
   // ...
-  'g-recaptcha-response': document.getElementById('g-recaptcha-response').value,
+  gCaptchaResponse: document.getElementById('g-recaptcha-response').value,
 };
 
 // ...

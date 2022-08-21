@@ -72,7 +72,7 @@ function setFields(...fieldsArr) {
 
 /**
  * Google reCAPTCHA V2 implementation
- * 
+ *
  * @param {String} secretKey Private key of reCAPTCHA site
  */
 function setRecaptcha(secretKey) {
@@ -102,22 +102,22 @@ function action(req) {
   if (captcha) {
     switch (captcha.type) {
       case 'recaptcha_v2':
-        const siteKey = jsonData['g-recaptcha-response'];
+        const siteKey = jsonData['gCaptchaResponse'];
 
         if (!siteKey) {
           response = {
             status: 'error',
-            message: 'reCAPTCHA verification under key \'g-recaptcha-response\' is required.',
+            message: "reCAPTCHA verification under key 'gCaptchaResponse' is required.",
           };
           return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
         }
 
         const captchaResponse = UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
-          'method': 'post',
-          'payload': {
-            'response': siteKey,
-            'secret': captcha.data.secretKey
-          }
+          method: 'post',
+          payload: {
+            response: siteKey,
+            secret: captcha.data.secretKey,
+          },
         });
 
         const captchaJson = JSON.parse(captchaResponse.getContentText());
@@ -182,8 +182,9 @@ function action(req) {
     }
   }
 
+  const emailData = fields.reduce((a, c) => ({ ...a, [c]: jsonData[c] }), {});
   const htmlBody = HtmlService.createTemplateFromFile('EmailTemplate');
-  htmlBody.data = jsonData;
+  htmlBody.data = emailData;
   htmlBody.formHeading = formHeading;
 
   const emailBody = htmlBody.evaluate().getContent();
