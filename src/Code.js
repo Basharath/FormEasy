@@ -175,10 +175,14 @@ function action(req) {
     ' ' +
     now.toLocaleTimeString('en-US');
 
+  // Inserting a row after the first row
+  logSheet.insertRowAfter(1);
+
+  // Filling the latest data in the second row
   for (let idx = 0; idx < length; idx++) {
-    logSheet.getRange(lastRow + 1, idx + 1).setValue(jsonData[fields[idx]]);
+    logSheet.getRange(2, idx + 1).setValue(jsonData[fields[idx]]);
     if (idx === length - 1) {
-      logSheet.getRange(lastRow + 1, idx + 2).setValue(date);
+      logSheet.getRange(2, idx + 2).setValue(date);
     }
   }
 
