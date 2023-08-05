@@ -146,6 +146,58 @@ const data = {
 // ...
 ```
 
+### Google reCAPTCHA V3
+
+Steps 1 & 2 same as above.
+
+3. On your website, add the reCAPTCHA library at the end of the `<head>` tag:
+
+```html
+<head>
+  <!-- ... -->
+
+  <script src="https://www.google.com/recaptcha/api.js?render=<YOUR_SITE_KEY>" async defer></script>
+</head>
+```
+
+4. Read the form data, reCAPTCHA V3 response token and send the request.
+
+```js
+const siteKey = "<YOUR_SITE_KEY>";
+  
+const url = 'https://script.google.com/macros/s/<Deployment ID>/exec';
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    // Make an API call to get the reCAPTCHA token
+    grecaptcha.ready(function () {
+      grecaptcha
+        .execute(siteKey, { action: "submit" })
+        .then(function (token) {
+            // Add the reCAPTCHA token to the form data
+            data.gCaptchaResponse = token;
+            data.name = document.getElementById("name").value;
+            data.website = document.getElementById("website").value;
+            data.email = document.getElementById("email").value;
+            data.message = document.getElementById("message").value;
+
+          fetch(url, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'text/plain;charset=utf-8',
+            },
+            body: JSON.stringify(data),
+          })
+          .then((res) => res.json())
+          .then((data) => console.log('data', data))
+          .catch((err) => console.log('err', err));
+        });
+    });
+  }
+
+  document.getElementById("<YOUR_FORM_ID>").addEventListener("submit", handleSubmit);
+```
 ## Video instructions
 
 To see all the above instructions lively, check this demo video below.
