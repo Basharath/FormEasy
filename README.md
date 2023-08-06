@@ -163,50 +163,43 @@ Steps 1 & 2 same as above.
 4. Read the form data, reCAPTCHA V3 response token and send the request.
 
 ```js
-const siteKey = "<YOUR_SITE_KEY>";
-  
+const siteKey = '<YOUR_SITE_KEY>';
+
 const url = 'https://script.google.com/macros/s/<Deployment ID>/exec';
 
 function handleSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Make an API call to get the reCAPTCHA token
-    grecaptcha.ready(function () {
-      grecaptcha
-        .execute(siteKey, { action: "submit" })
-        .then(function (token) {
-            // Add the reCAPTCHA token to the form data
-            data.gCaptchaResponse = token;
-            data.name = document.getElementById("name").value;
-            data.website = document.getElementById("website").value;
-            data.email = document.getElementById("email").value;
-            data.message = document.getElementById("message").value;
+  // Make an API call to get the reCAPTCHA token
+  grecaptcha.ready(function () {
+    grecaptcha.execute(siteKey, { action: 'submit' }).then(function (token) {
+      // Add the reCAPTCHA token to the form data
+      data.gCaptchaResponse = token;
+      data.name = document.getElementById('name').value;
+      data.website = document.getElementById('website').value;
+      data.email = document.getElementById('email').value;
+      data.message = document.getElementById('message').value;
 
-          fetch(url, {
-            method: "POST",
-            headers: {
-                'Content-Type': 'text/plain;charset=utf-8',
-            },
-            body: JSON.stringify(data),
-          })
-          .then((res) => res.json())
-          .then((data) => console.log('data', data))
-          .catch((err) => console.log('err', err));
-        });
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log('data', data))
+        .catch((err) => console.log('err', err));
     });
-  }
+  });
+}
 
-  document.getElementById("<YOUR_FORM_ID>").addEventListener("submit", handleSubmit);
+document.getElementById('<YOUR_FORM_ID>').addEventListener('submit', handleSubmit);
 ```
+
 ## Video instructions
 
-To see all the above instructions lively, check this demo video below.
-
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=0u75mtnhifM/">
-    <img alt="FormEasy video demo" src="https://img.youtube.com/vi/0u75mtnhifM/0.jpg" width="510" height="280"  />
-  </a>
-</p>
+To see all the above instructions step by step, check this quick [demo video](https://www.youtube.com/watch?v=0u75mtnhifM/).
 
 ## FAQs
 
