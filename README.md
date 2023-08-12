@@ -98,6 +98,10 @@ Note: The keys of the `data` object should match with the fields that are set us
 
 Article: https://devapt.com/formspree-alternative-formeasy
 
+## Demo submission with live Google sheet
+
+Here is the [demo code](https://stackblitz.com/edit/js-55dzc8?file=index.html,index.js) and the live [Google sheet](https://docs.google.com/spreadsheets/d/13sGrLUk0ScU1qfRyOZzFG5pnksh7IAiTJw1Eio1jfaE/edit#gid=0) to get an idea on how this FormEasy library helps in receiving forms
+
 ## Captcha validation
 
 FormEasy supports multiple captcha providers to allow you to prevent unverified submissions by robots. Each provider is unique and requires a unique configuration. Please refer to the documentation below to enable a specific captcha provider.
