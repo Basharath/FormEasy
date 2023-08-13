@@ -248,7 +248,7 @@ After your PR gets merged, you'll be apparing on the [contributors page](https:/
 
 - Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/Basharath/FormEasy/compare).
 
-- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests.
+- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on CODE OF CONDUCT, and the process for submitting pull requests.
 
 ## License
 
