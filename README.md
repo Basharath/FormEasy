@@ -238,6 +238,18 @@ But Google Apps Script limits the email to 100/day and script run time to 6min/e
 
 </details>
 
+## Contributing
+
+Pull Requests are always welcome!
+
+If you wish to contribute using Github, you can work on any feature ideas you have or any bug fixes if you have noticed.
+
+After your PR gets merged, you'll be apparing on the [contributors page](https://github.com/Basharath/FormEasy/graphs/contributors).
+
+- Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/Basharath/FormEasy/compare).
+
+- Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests.
+
 ## License
 
 FormEasy is distributed using the MIT License. Check the [License details](https://github.com/Basharath/FormEasy/blob/master/LICENSE).
