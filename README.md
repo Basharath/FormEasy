@@ -261,5 +261,7 @@ If you found this library helpful, please leave a star ⭐️
 If you like this open source work, consider supporting with a coffee.
 
 <div align="center">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
+  <a href="https://www.buymeacoffee.com/basharath" target="_blank">
+   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
+  </a>
 </div>
