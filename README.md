@@ -253,3 +253,13 @@ After your PR gets merged, you'll be apparing on the [contributors page](https:/
 ## License
 
 FormEasy is distributed using the MIT License. Check the [License details](https://github.com/Basharath/FormEasy/blob/master/LICENSE).
+
+## Support
+
+If you found this library helpful, please leave a star ⭐️
+
+If you like this open source work, consider supporting with a coffee.
+
+<div align="center">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
+</div>
