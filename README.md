@@ -100,7 +100,7 @@ Article: https://devapt.com/formspree-alternative-formeasy
 
 ## Demo submission with live Google sheet
 
-Here is the [demo code](https://stackblitz.com/edit/js-55dzc8?file=index.html,index.js) and the live [Google sheet](https://docs.google.com/spreadsheets/d/13sGrLUk0ScU1qfRyOZzFG5pnksh7IAiTJw1Eio1jfaE/edit#gid=0) to get an idea on how this FormEasy library helps in receiving forms
+Here is the [demo code](https://stackblitz.com/edit/js-55dzc8?file=index.html,index.js) and the live [Google sheet](https://docs.google.com/spreadsheets/d/13sGrLUk0ScU1qfRyOZzFG5pnksh7IAiTJw1Eio1jfaE/edit#gid=0) to get an idea on how this FormEasy library helps in receiving forms.
 
 ## Captcha validation
 
@@ -256,9 +256,9 @@ FormEasy is distributed using the MIT License. Check the [License details](https
 
 ## Support
 
-If you found this library helpful, please leave a star ⭐️
+If you found this library helpful, please give a star ⭐️
 
-If you like this open source work, consider supporting with a coffee.
+If you like this open source work, consider supporting with a coffee ↓
 
 <div align="center">
   <a href="https://www.buymeacoffee.com/basharath" target="_blank">
